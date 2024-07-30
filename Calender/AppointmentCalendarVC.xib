@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppointmentCalendarVC" customModule="Glamera_Business" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarView" destination="p80-JI-mOW" id="eNO-df-iXi"/>
+                <outlet property="clearBtn" destination="r6a-gv-q3C" id="S1D-Yi-v1R"/>
+                <outlet property="dismissView" destination="YSr-7m-99i" id="zs3-fe-EdS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-Fc-xDY">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="bww-Ts-Sud"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsa-dC-Z8K">
+                    <rect key="frame" x="0.0" y="60" width="393" height="420"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-rV-WUS">
+                            <rect key="frame" x="171.66666666666666" y="412" width="50" height="4"/>
+                            <color key="backgroundColor" name="pos-title"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="Iho-Cu-Ckh"/>
+                                <constraint firstAttribute="width" constant="50" id="mmF-Pw-W7p"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p80-JI-mOW" customClass="FSCalendar">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="345"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                    <color key="value" name="black"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                    <color key="value" red="0.30980392156862746" green="0.29019607843137252" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                    <color key="value" name="darkGray"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderSelectionColor">
+                                    <color key="value" name="primaryColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                    <real key="value" value="60"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                    <color key="value" name="black"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                    <real key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="bottomCornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-MU-Ifg">
+                            <rect key="frame" x="20" y="355" width="353" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-gv-q3C">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="45"/>
+                                    <color key="backgroundColor" name="white"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Clear">
+                                        <color key="titleColor" name="primaryColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="primaryColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="clearFilterButtonPressed:" destination="-1" eventType="touchUpInside" id="eb9-ts-WX0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-Tp-P5r">
+                                    <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="45"/>
+                                    <color key="backgroundColor" name="primaryColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="2Kg-5h-S8W"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Apply">
+                                        <color key="titleColor" name="white"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="applyFilterButtonPressed:" destination="-1" eventType="touchUpInside" id="Sa1-3x-slQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="K2e-Tp-P5r" firstAttribute="width" secondItem="r6a-gv-q3C" secondAttribute="width" id="wCG-2b-sJp"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="420" id="2C3-XM-n1e"/>
+                        <constraint firstAttribute="trailing" secondItem="p80-JI-mOW" secondAttribute="trailing" id="ENE-W9-Zaa"/>
+                        <constraint firstItem="p80-JI-mOW" firstAttribute="leading" secondItem="qsa-dC-Z8K" secondAttribute="leading" id="Na4-gd-q4C"/>
+                        <constraint firstItem="Zby-rV-WUS" firstAttribute="top" secondItem="b4h-MU-Ifg" secondAttribute="bottom" constant="12" id="ceG-KM-5H8"/>
+                        <constraint firstItem="b4h-MU-Ifg" firstAttribute="leading" secondItem="qsa-dC-Z8K" secondAttribute="leading" constant="20" id="fBV-XU-HYv"/>
+                        <constraint firstAttribute="trailing" secondItem="b4h-MU-Ifg" secondAttribute="trailing" constant="20" id="geH-Xc-0aS"/>
+                        <constraint firstItem="b4h-MU-Ifg" firstAttribute="top" secondItem="p80-JI-mOW" secondAttribute="bottom" constant="10" id="kiz-R6-vsZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Zby-rV-WUS" secondAttribute="bottom" constant="4" id="qBh-be-dmr"/>
+                        <constraint firstItem="p80-JI-mOW" firstAttribute="top" secondItem="qsa-dC-Z8K" secondAttribute="top" id="r1U-Oq-rS2"/>
+                        <constraint firstItem="Zby-rV-WUS" firstAttribute="centerX" secondItem="qsa-dC-Z8K" secondAttribute="centerX" id="v31-9U-cdc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vV-Zg-R0m">
+                    <rect key="frame" x="0.0" y="67" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5vV-Zg-R0m" secondAttribute="height" id="MXt-dj-Zlj"/>
+                        <constraint firstAttribute="height" constant="35" id="vFW-QH-xAZ"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="calendar-left"/>
+                    <connections>
+                        <action selector="previousMonthButtonPressed:" destination="-1" eventType="touchUpInside" id="Ael-eP-AXx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9L-XB-D7v">
+                    <rect key="frame" x="358" y="67" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="J0G-vs-G7L"/>
+                        <constraint firstAttribute="width" secondItem="h9L-XB-D7v" secondAttribute="height" id="Y9N-Nm-DrM"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="calendar-right"/>
+                    <connections>
+                        <action selector="nextMonthButtonPressed:" destination="-1" eventType="touchUpInside" id="0dc-gy-7Y6"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSr-7m-99i">
+                    <rect key="frame" x="0.0" y="480" width="393" height="372"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.30217818708609273" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5vV-Zg-R0m" firstAttribute="centerY" secondItem="h9L-XB-D7v" secondAttribute="centerY" id="JGb-oy-RNP"/>
+                <constraint firstItem="h9L-XB-D7v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="JPI-EU-MEd"/>
+                <constraint firstItem="5vV-Zg-R0m" firstAttribute="width" secondItem="5vV-Zg-R0m" secondAttribute="height" id="Kse-aU-kjF"/>
+                <constraint firstItem="bj5-Fc-xDY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LFX-Lx-xbV"/>
+                <constraint firstItem="qsa-dC-Z8K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NRu-Oo-Qdq"/>
+                <constraint firstItem="qsa-dC-Z8K" firstAttribute="top" secondItem="bj5-Fc-xDY" secondAttribute="bottom" id="TsX-nR-2GE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="5vV-Zg-R0m" secondAttribute="leading" id="U2e-WJ-vph"/>
+                <constraint firstItem="YSr-7m-99i" firstAttribute="top" secondItem="qsa-dC-Z8K" secondAttribute="bottom" id="WIo-gt-iie"/>
+                <constraint firstItem="qsa-dC-Z8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aFS-cl-eVr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YSr-7m-99i" secondAttribute="trailing" id="eYE-uL-urV"/>
+                <constraint firstItem="h9L-XB-D7v" firstAttribute="width" secondItem="h9L-XB-D7v" secondAttribute="height" id="fuw-6a-mAs"/>
+                <constraint firstItem="bj5-Fc-xDY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fvp-co-hkZ"/>
+                <constraint firstItem="YSr-7m-99i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gVt-yU-X3g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h9L-XB-D7v" secondAttribute="trailing" id="iTU-IV-se6"/>
+                <constraint firstItem="qsa-dC-Z8K" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jJ0-Yf-Tf5"/>
+                <constraint firstItem="qsa-dC-Z8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jTz-0K-6kW"/>
+                <constraint firstAttribute="trailing" secondItem="bj5-Fc-xDY" secondAttribute="trailing" id="mEw-Y7-zrv"/>
+                <constraint firstItem="5vV-Zg-R0m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="po7-V6-siq"/>
+                <constraint firstAttribute="bottom" secondItem="YSr-7m-99i" secondAttribute="bottom" id="xKL-H8-Zh0"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-left" width="24" height="24"/>
+        <image name="calendar-right" width="24" height="24"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGray">
+            <color red="0.45490196078431372" green="0.47843137254901963" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pos-title">
+            <color red="0.3843137254901961" green="0.42352941176470588" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.3880000114440918" green="0.36100000143051147" blue="0.6589999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

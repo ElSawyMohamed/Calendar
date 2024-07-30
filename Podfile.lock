@@ -1,0 +1,20 @@
+PODS:
+  - FSCalendar (2.8.4)
+  - KVKCalendar (0.6.24)
+
+DEPENDENCIES:
+  - FSCalendar
+  - KVKCalendar
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - KVKCalendar
+
+SPEC CHECKSUMS:
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  KVKCalendar: b25cf298beb1afd424781dbd5243cf20544f1512
+
+PODFILE CHECKSUM: 190b6af2fce6f2e4a456f63cf00e28625a49d0c3
+
+COCOAPODS: 1.15.2
