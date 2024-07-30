@@ -21,31 +21,28 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-Ay-uyn">
                         <rect key="frame" x="0.0" y="0.0" width="122" height="103"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GId-WM-IAq">
-                                <rect key="frame" x="0.0" y="0.0" width="122" height="103"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1W0-MB-nrW">
-                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="tWm-ET-o4s"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-Bt-TMs">
-                                        <rect key="frame" x="0.0" y="50" width="122" height="53"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1W0-MB-nrW">
+                                <rect key="frame" x="36" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bha-Ah-Nf1"/>
+                                    <constraint firstAttribute="height" constant="50" id="pwi-Rb-0pa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dddd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-Bt-TMs">
+                                <rect key="frame" x="0.0" y="82.666666666666671" width="122" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GId-WM-IAq" secondAttribute="trailing" id="A4d-G5-RYh"/>
-                            <constraint firstItem="GId-WM-IAq" firstAttribute="top" secondItem="7Xu-Ay-uyn" secondAttribute="top" id="Mhl-8H-2e3"/>
-                            <constraint firstAttribute="bottom" secondItem="GId-WM-IAq" secondAttribute="bottom" id="tmA-ZW-Bfh"/>
-                            <constraint firstItem="GId-WM-IAq" firstAttribute="leading" secondItem="7Xu-Ay-uyn" secondAttribute="leading" id="yeZ-AS-Fde"/>
+                            <constraint firstAttribute="trailing" secondItem="hTd-Bt-TMs" secondAttribute="trailing" id="2q3-jV-hfL"/>
+                            <constraint firstAttribute="bottom" secondItem="hTd-Bt-TMs" secondAttribute="bottom" id="J4A-KU-1wY"/>
+                            <constraint firstItem="hTd-Bt-TMs" firstAttribute="leading" secondItem="7Xu-Ay-uyn" secondAttribute="leading" id="U2D-QV-9dh"/>
+                            <constraint firstItem="1W0-MB-nrW" firstAttribute="top" secondItem="7Xu-Ay-uyn" secondAttribute="top" id="hdb-6S-u06"/>
+                            <constraint firstItem="1W0-MB-nrW" firstAttribute="centerX" secondItem="7Xu-Ay-uyn" secondAttribute="centerX" id="pfB-hh-YzB"/>
                         </constraints>
                     </view>
                 </subviews>
